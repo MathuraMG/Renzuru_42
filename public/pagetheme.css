@@ -1,0 +1,137 @@
+@font-face
+{
+    font-family:"CoverFont";
+    src: url(fonts/Coffee.ttf);
+}
+@font-face
+{
+    font-family:"DescFont";
+    src: url(fonts/Girls.ttf);
+}
+div.MenuBar
+{
+    display: inline-block;
+    width: 20%;
+    margin: 0px auto;
+    font-family:"CoverFont";
+}
+div.MenuBar1
+{
+    display: inline-block;
+    width: 50%;
+    margin: 0px auto;
+    font-family:"CoverFont";
+}
+a.TitleBox
+{
+    font-size: 25px;
+}
+a.MenuBox 
+{
+    display: inline-block;
+    float: left;
+    width: 13%;
+    margin: 0 0;
+    font-family:"CoverFont";
+    vertical-align: text-bottom;
+}
+a.MenuBoxSelect 
+{
+    display: inline-block;
+    float: left;
+    width: 13%;
+    margin: 0 0;
+    font-family:"CoverFont";
+    vertical-align: text-bottom;
+    color: #999999;
+}
+a.MenuName 
+{
+    display: inline-block;
+    float: left;
+    width: 100%;
+    font-family:"CoverFont";
+    font-size: 3.0vw;
+    color: #999999;
+    vertical-align: text-bottom;
+    height: 4.0vw;
+}
+a.MenuName:hover 
+{
+    background-color: #555555;
+    color: #ff9900;
+}
+a.MenuBox:hover 
+{
+    background-color: #555555;
+    color: #ff9900;
+    font-weight: bolder;
+}
+a.MenuNameActive 
+{
+    color: #ff9900;
+}
+a.MenuBoxActive
+{
+    color: #ff9900;
+}
+a.MenuBox:active 
+{
+    background-color: #eeeccc;
+}
+body
+{
+    /*background-color:#111111;*/
+    background-image: url(images/BackImg.jpg);
+    background-position: top;
+    background-size: 100%;
+}
+h1
+{
+    font-family:"CoverFont";
+    font-size: 50px;
+    color:#999999;
+    text-align:center;
+    vertical-align: text-bottom;
+}
+a
+{
+    font-family:"CoverFont";
+    /*font-size:18px;*/
+    font-size: 2.0vw;
+    color:#ffffff;
+    text-align:center;
+    vertical-align: bottom;
+    text-decoration: none
+}
+a.Desc
+{
+    font-family:"CoverFont";
+    font-size: 1.0vw;
+    color:#ffffff;
+    text-align:left;
+    vertical-align: bottom;
+    text-decoration: none
+}
+p.DescFull
+{
+    font-family:"DescFont";
+    font-size: 1.0vw;
+    color:#ffffff;
+    text-align:left;
+    vertical-align: bottom;
+    text-decoration: none
+}
+img
+{
+    max-width: 75%;
+    display:inline;
+    margin:2px;
+    border:3px solid #ffffff;
+}
+p
+{
+    font-family: "DescFont";
+    color: #eeeeee;
+    font-size: 1.1vw;
+}

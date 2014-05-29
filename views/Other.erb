@@ -1,0 +1,49 @@
+<title> Other </title>
+<body>
+	<%= erb :Menu %>
+	<center>
+		<div id="ImageBox" class="ImageBox" >
+			<div id="ImageBoxInner" class="ImageBoxInner" >
+				<div id="Img1" class="Image">
+					<img border="0" id="Image1" src="/images/Other/1.jpg" alt="Cover Pic" onclick="replacePicture( this.id );
+					getImageDescOthers( this.id );">
+				</div>
+				<div class="ImageGap"></div>
+				<div id="Img1" class="Image">
+					<img border="0" id="Image2" src="/images/Other/2.jpg" alt="Cover Pic" onclick="replacePicture( this.id );
+					getImageDescOthers( this.id );">
+				</div>
+				<div class="ImageGap"></div>
+				<div id="Img1" class="Image">
+					<img border="0" id="Image3" src="/images/Other/3.jpg" alt="Cover Pic" onclick="replacePicture( this.id );
+					getImageDescOthers( this.id );">
+				</div>
+				<div class="ImageGap"></div>
+				<div id="Img1" class="Image">
+					<img border="0" id="Image4" src="/images/Other/4.jpg" alt="Cover Pic" onclick="replacePicture( this.id );
+					getImageDescOthers( this.id );">
+				</div>
+				<div class="ImageGap"></div>
+				<div id="Img1" class="Image">
+					<img border="0" id="Image5" src="/images/Other/5.jpg" alt="Cover Pic" onclick="replacePicture( this.id );
+					getImageDescOthers( this.id );">
+				</div>
+			</div>
+		</div>
+		<div class="ImageBoxMain">
+			<div class="ImageGap"></div>
+			<div id="MainImage" class="ImageMain" display="inline">
+				<img border="0" id="ImageMain" src="/images/Other/5.jpg" alt="Cover Pic">
+			</div>
+			<div id="ImageDesc" class="ImageDesc" display="inline">
+				<p id="Desc" class="Desc"> -- </p>
+			</div>
+		</div>
+	<center>
+	<script>
+	getScrollHeight();
+	getImageDescOthers('Image5');
+	</script>
+	<%= erb :Footer %>
+</body>
+

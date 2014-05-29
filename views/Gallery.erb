@@ -1,0 +1,173 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <!-- This page is copyright Elated Communications Ltd. (www.elated.com) -->
+
+   <script type="text/javascript">
+    //<![CDATA[
+
+    var tabLinks = new Array();
+    var contentDivs = new Array();
+
+    function init() {
+
+      // Grab the tab links and content divs from the page
+      var tabListItems = document.getElementById('tabs').childNodes;
+      for ( var i = 0; i < tabListItems.length; i++ ) {
+        if ( tabListItems[i].nodeName == "LI" ) {
+          var tabLink = getFirstChildWithTagName( tabListItems[i], 'A' );
+          var id = getHash( tabLink.getAttribute('href') );
+          tabLinks[id] = tabLink;
+          contentDivs[id] = document.getElementById( id );
+        }
+      }
+
+      // Assign onclick events to the tab links, and
+      // highlight the first tab
+      var i = 0;
+
+      for ( var id in tabLinks ) {
+        tabLinks[id].onclick = showTab;
+        tabLinks[id].onfocus = function() { this.blur() };
+        if ( i == 0 ) tabLinks[id].className = 'selected';
+        i++;
+      }
+
+      // Hide all content divs except the first
+      var i = 0;
+
+      for ( var id in contentDivs ) {
+        if ( i != 0 ) contentDivs[id].className = 'tabContent hide';
+        i++;
+      }
+    }
+
+    function showTab() {
+      var selectedId = getHash( this.getAttribute('href') );
+
+      // Highlight the selected tab, and dim all others.
+      // Also show the selected content div, and hide all others.
+      for ( var id in contentDivs ) {
+        if ( id == selectedId ) {
+          tabLinks[id].className = 'selected';
+          contentDivs[id].className = 'tabContent';
+        } else {
+          tabLinks[id].className = '';
+          contentDivs[id].className = 'tabContent hide';
+        }
+      }
+
+      // Stop the browser following the link
+      return false;
+    }
+
+    function getFirstChildWithTagName( element, tagName ) {
+      for ( var i = 0; i < element.childNodes.length; i++ ) {
+        if ( element.childNodes[i].nodeName == tagName ) return element.childNodes[i];
+      }
+    }
+
+    function getHash( url ) {
+      var hashPos = url.lastIndexOf ( '#' );
+      return url.substring( hashPos + 1 );
+    }
+
+    //]]>
+    </script>
+  
+  <link rel="stylesheet" href="gallery.css" >
+   <h1> Gallery </h1>
+   </head>
+
+  <body onload="init()">
+    
+    <table align="center">
+  <tr>
+    <td align="center">
+      <a href = "/"> Home </a>
+    </td>
+    <td align="center" >
+      <a href = "/AboutMe"> About </a>
+    </td>
+    <td align="center">
+      <a href = "/Gallery"> Gallery </a> 
+    </td>
+    <td align="center">
+      <a href = "/Contact"> Contact </a>
+    </td>
+  </tr>
+
+</table>
+    <table id="main" align="center" width="500px">
+
+	<tr><td>
+	<ul id="tabs"> 
+	<li><a href='#origami'>Origami</a></li> 
+	<li><a href='#pencil'>Pencil</a></li> 
+	<li><a href='#charcoal'>Charcoal</a></li> 
+	</ul> 
+	
+
+    <div class="tabContent" id="origami">
+
+    	<table align="center">
+			</h1>
+				<tr>
+					<td  colspan="1" align="center"><img border="0" src="/images/Ch/1.JPG" alt="Cover Pic" width="200px"></td>
+					<td  colspan="1" align="center"><img border="0" src="/images/Ch/2.JPG" alt="Cover Pic" width="200px"></td>
+				</tr>
+				<tr>
+					<td  colspan="1" align="center"><img border="0" src="/images/Ch/3.png" alt="Cover Pic" width="200px"></td>
+					<td  colspan="1" align="center"><img border="0" src="/images/Ch/4.png" alt="Cover Pic" width="200px"></td>
+				</tr>
+				<tr>
+					<td  colspan="1" align="center"><img border="0" src="/images/Ch/5.jpg" alt="Cover Pic" width="200px"></td>
+					<td  colspan="1" align="center"><img border="0" src="/images/Ch/6.jpg" alt="Cover Pic" width="200px"></td>
+				</tr>
+			</table>
+    </div>
+
+    <div class="tabContent" id="pencil">
+    	<table align="center">
+			</h1>
+				<tr>
+					<td  colspan="1" align="center"><img border="0" src="/images/Pencil/1.JPG" alt="Cover Pic" width="200px"></td>
+					<td  colspan="1" align="center"><img border="0" src="/images/Pencil/2.JPG" alt="Cover Pic" width="200px"></td>
+				</tr>
+				<tr>
+					<td  colspan="1" align="center"><img border="0" src="/images/Pencil/3.jpg" alt="Cover Pic" width="200px"></td>
+					<td  colspan="1" align="center"><img border="0" src="/images/Pencil/4.png" alt="Cover Pic" width="200px"></td>
+				</tr>
+				<tr>
+					<td  colspan="1" align="center"><img border="0" src="/images/Pencil/5.png" alt="Cover Pic" width="200px"></td>
+					<td  colspan="1" align="center"><img border="0" src="/images/Pencil/6.jpg" alt="Cover Pic" width="200px"></td>
+				</tr>
+			</table>
+    </div>
+
+    <div class="tabContent" id="charcoal">
+    	<table align="center">
+			</h1>
+				<tr>
+					<td  colspan="1" align="center"><img border="0" src="/images/Ch/1.JPG" alt="Cover Pic" width="200px"></td>
+					<td  colspan="1" align="center"><img border="0" src="/images/Ch/2.JPG" alt="Cover Pic" width="200px"></td>
+				</tr>
+				<tr>
+					<td  colspan="1" align="center"><img border="0" src="/images/Ch/3.png" alt="Cover Pic" width="200px"></td>
+					<td  colspan="1" align="center"><img border="0" src="/images/Ch/4.png" alt="Cover Pic" width="200px"></td>
+				</tr>
+				<tr>
+					<td  colspan="1" align="center"><img border="0" src="/images/Ch/5.jpg" alt="Cover Pic" width="200px"></td>
+					<td  colspan="1" align="center"><img border="0" src="/images/Ch/6.jpg" alt="Cover Pic" width="200px"></td>
+				</tr>
+			</table>  
+    </div>
+
+</td></tr>
+</table>
+    <p><a href="/articles/javascript-tabs/">Return to the JavaScript Tabs article</a></p>
+
+  </body>
+</html>

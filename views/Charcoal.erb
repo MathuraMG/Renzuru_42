@@ -1,0 +1,52 @@
+<title> Charcoal </title>
+
+<body class ="Back">
+	<%= erb :Menu %>
+	<center>
+		
+		<div id="ImageBox" class="ImageBox" >
+			<div id="ImageBoxInner" class="ImageBoxInner" >
+			<div class="ImageGap"></div>
+				<div id="Img1" class="Image">
+					<img border="0" id="Image1" class="ImageIn" src="/images/Ch/1.jpg" alt="Cover Pic" onclick="replacePicture( this.id );getImageDescCharcoal( this.id )">
+				</div>
+				<div class="ImageGap"></div>
+				<div id="Img1" class="Image">
+					<img border="0" id="Image2" class="ImageIn" src="/images/Ch/2.jpg" alt="Cover Pic" onclick="replacePicture( this.id );getImageDescCharcoal( this.id )">
+				</div>
+				<div class="ImageGap"></div>
+				<div id="Img1" class="Image">
+					<img border="0" id="Image3" class="ImageIn" src="/images/Ch/3.png" alt="Cover Pic" onclick="replacePicture( this.id );getImageDescCharcoal( this.id )">
+				</div>
+				<div class="ImageGap"></div>
+				<div id="Img1" class="Image">
+					<img border="0" id="Image4" class="ImageIn" src="/images/Ch/4.png" alt="Cover Pic" onclick="replacePicture( this.id );getImageDescCharcoal( this.id )">
+				</div>
+				<div class="ImageGap"></div>
+				<div id="Img1" class="Image">
+					<img border="0" id="Image5" class="ImageIn" src="/images/Ch/5.jpg" alt="Cover Pic" onclick="replacePicture( this.id );getImageDescCharcoal( this.id )">
+				</div>
+				<div class="ImageGap"></div>
+				<div id="Img1" class="Image">
+					<img border="0" class="ImageIn" id="Image6" src="/images/Ch/6.jpg" alt="Cover Pic" onclick="replacePicture( this.id );getImageDescCharcoal( this.id )">
+				</div>
+				<div class="ImageGap"></div>
+			</div>
+		</div>
+		<div class="ImageBoxMain">
+			<div class="ImageGap"></div>
+			<div id="MainImage" class="ImageMain" display="inline">
+				<img border="0" id="ImageMain" src="/images/Ch/6.jpg" alt="Cover Pic">
+			</div>
+			<div id="ImageDesc" class="ImageDesc" display="inline">
+				<p id="Desc" class="Desc"> -- </p>
+			</div>
+		</div>
+	<center>
+	<script>
+	getScrollHeight();
+	getImageDescCharcoal('Image6');
+	</script>
+
+	<%= erb :Footer %>
+</body>
