@@ -26,7 +26,7 @@ a.TitleBox
 {
     font-size: 25px;
 }
-a.MenuBox 
+a.MenuBox
 {
     display: inline-block;
     float: left;
@@ -35,7 +35,7 @@ a.MenuBox
     font-family:"CoverFont";
     vertical-align: text-bottom;
 }
-a.MenuBoxSelect 
+a.MenuBoxSelect
 {
     display: inline-block;
     float: left;
@@ -45,7 +45,7 @@ a.MenuBoxSelect
     vertical-align: text-bottom;
     color: #999999;
 }
-a.MenuName 
+a.MenuName
 {
     display: inline-block;
     float: left;
@@ -56,18 +56,18 @@ a.MenuName
     vertical-align: text-bottom;
     height: 4.0vw;
 }
-a.MenuName:hover 
+a.MenuName:hover
 {
     background-color: #555555;
     color: #ff9900;
 }
-a.MenuBox:hover 
+a.MenuBox:hover
 {
     background-color: #555555;
     color: #ff9900;
     font-weight: bolder;
 }
-a.MenuNameActive 
+a.MenuNameActive
 {
     color: #ff9900;
 }
@@ -75,7 +75,7 @@ a.MenuBoxActive
 {
     color: #ff9900;
 }
-a.MenuBox:active 
+a.MenuBox:active
 {
     background-color: #eeeccc;
 }
@@ -111,7 +111,11 @@ a.Desc
     color:#ffffff;
     text-align:left;
     vertical-align: bottom;
-    text-decoration: none
+    text-decoration: underline
+}
+a.Desc:hover
+{
+  color:#ffcc55
 }
 p.DescFull
 {
